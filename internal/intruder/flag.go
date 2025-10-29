@@ -1,6 +1,8 @@
-package config
+package intruder
 
-import "strings"
+import (
+	"strings"
+)
 
 // For those flags that repeat more than once
 type multiStringFlag []string
@@ -23,8 +25,4 @@ func (w *wordListFlag) Set(value string) error {
 		*w = append(*w, value)
 	}
 	return nil
-}
-
-func ParseFlages(config *Config) *Config {
-
 }
